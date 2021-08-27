@@ -33,7 +33,7 @@ class Main extends PluginBase implements Listener {
 		switch (strtolower($command->getName()))
 		{
 			case 'toggledrops':
-				if(!$sender instanceof Player) {
+				if(!$sender instanceof Player OR $sender->hasPermission("nodrops.command")) {
 					if ($this->getConfig()->get("enabled") === true) {
 						$this->getConfig()->set("enabled", false);
 						$this->getConfig()->save();
