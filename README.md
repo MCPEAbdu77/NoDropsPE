@@ -15,7 +15,7 @@ Simply install the plugin on the server and it is ready. Currently there is no c
 `/trashbin`
   - Description: This commands remove the item you're holding.
   
-`dropstoggle`
+`toggledrops`
   - Description: This command toggle the the ability of dropping items.
   - Default: op (only operators can execute this command)
 
