@@ -1,0 +1,23 @@
+---
+name: NoDrops
+version: 4.20.69
+main: MCA7\NoDrops\Main
+api: 3.22.1
+
+commands:
+  toggledrops:
+    description: "toggle NoDrops"
+    permission: nodrop.command
+  trash:
+    description: "Removes item from inventory"
+  trashbin:
+    description: "Removed item from inventory"
+  drop:
+    description: "Hold the item and use to drop items"
+  dropitem:
+    description: "Hold the item and use to drop items"
+
+permissions:
+  nodrop.command:
+    default: op
+...
