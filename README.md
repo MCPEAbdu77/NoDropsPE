@@ -21,8 +21,7 @@ Simply install the plugin on the server and it is ready. Currently there is no c
 
 ### Planned Addons:
 
- - Config.yml
- - To enable/disable `/drop` command.
+ - To enable/disable `/drop` command from config.yml.
 
 # Contact
 
