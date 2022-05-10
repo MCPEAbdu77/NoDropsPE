@@ -2,7 +2,7 @@
 name: NoDrops
 version: 4.20.69
 main: MCA7\NoDrops\Main
-api: 3.22.1
+api: 4.0.0
 
 commands:
   toggledrops:
