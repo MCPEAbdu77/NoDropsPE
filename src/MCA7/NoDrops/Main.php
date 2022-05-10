@@ -11,17 +11,17 @@ use pocketmine\command\CommandSender;
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerDropItemEvent;
 use pocketmine\math\Vector3;
-use pocketmine\Player;
+use pocketmine\player\Player;
 use pocketmine\plugin\PluginBase;
 
 class Main extends PluginBase implements Listener {
 
-	public function onEnable() {
+	public function onEnable():void {
 		@mkdir($this->getDataFolder());
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 	}
 
-	public function onDrop(PlayerDropItemEvent $e){
+	public function onDrop(PlayerDropItemEvent $e):void {
 		if($this->getConfig()->get("enabled") === true){
 			$e->getPlayer()->sendMessage("§cYou are not allowed to drop items! \n §cUse §e/drop §cto drop the item!");
 			$e->setCancelled();
@@ -46,7 +46,7 @@ class Main extends PluginBase implements Listener {
 				} else {
 					$sender->sendMessage("§cYou do not have the permission!");
 				}
-				return true;
+				return;
 			case 'trash':
 			case 'trashbin':
 				if($sender instanceof Player){
@@ -56,7 +56,7 @@ class Main extends PluginBase implements Listener {
 				} else {
 					$sender->sendMessage("Execute in-game!");
 				}
-				return true;
+				return;
 			case 'dropitem':
 			case 'drop':
 				if($sender instanceof Player){
@@ -75,6 +75,6 @@ class Main extends PluginBase implements Listener {
 					$sender->sendMessage("Execute in-game only!");
 				}
 		}
-		return true;
+		return;
 	}
 }
