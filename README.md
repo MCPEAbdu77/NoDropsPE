@@ -19,10 +19,6 @@ Simply install the plugin on the server and it is ready. Currently there is no c
   - Description: This command toggle the the ability of dropping items.
   - Default: op (only operators can execute this command)
 
-### Planned Addons:
-
- - To enable/disable `/drop` command from config.yml.
-
 # Contact
 
   - Discord: MCA7#1245
