@@ -1,2 +1,6 @@
-# NoDrop by MCA7
+# NoDropsPE by MCA7 (C) 2022
+#==========================
+# true = on | false = off
+#==========================
 enabled: true
+drop-command: true
