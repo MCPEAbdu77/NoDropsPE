@@ -7,7 +7,7 @@ api: 4.0.0
 commands:
   toggledrops:
     description: "toggle NoDrops"
-    permission: nodrop.command
+    permission: nodropspe.command
   trash:
     description: "Removes item from inventory"
   trashbin:
@@ -18,6 +18,6 @@ commands:
     description: "Hold the item and use to drop items"
 
 permissions:
-  nodrop.command:
+  nodropspe.command:
     default: op
 ...
