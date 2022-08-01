@@ -11,14 +11,22 @@ commands:
     permission: nodropspe.command
   trash:
     description: "Removes item from inventory"
+    permission: nodropspe.trash
   trashbin:
     description: "Removed item from inventory"
+    permission: nodropspe.trash
   drop:
     description: "Hold the item and use to drop items"
+    permission: nodropspe.drop
   dropitem:
     description: "Hold the item and use to drop items"
+    permission: nodropspe.drop
 
 permissions:
   nodropspe.command:
     default: op
+  nodropspe.drop:
+    default: true
+  nodropspe.trash:
+    default: true
 ...
