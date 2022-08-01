@@ -35,7 +35,7 @@ class Main extends PluginBase implements Listener
 
 			case 'toggledrops':
 
-				if(!get_class($sender) == "pocketmine\player\Player" or $sender->hasPermission("nodrop.command")) {
+				if(get_class($sender) !== "pocketmine\player\Player" or $sender->hasPermission("nodrop.command")) {
 					if($this->getConfig()->get("enabled") === true) {
 						$this->getConfig()->set("enabled", false);
 						$this->getConfig()->save();
@@ -46,30 +46,30 @@ class Main extends PluginBase implements Listener
 						$sender->sendMessage("§aToggled drops (enabled)");
 					}
 				} else {
-					$sender->sendMessage("§cYou do not have the permission!");
+					$sender->sendMessage("§cYou do not have the permission to execute this command!");
 				}
 				return true;
 
 			case 'trash':
 			case 'trashbin':
 
-				if(get_class($sender) == "pocketmine\player\Player") {
-					$trash = $sender->getInventory()->getItemInHand();
-					if($trash->isNull()) {
-						$sender->sendMessage('§cHold the trash!');
-						return true;
-					}
-					$sender->getInventory()->removeItem($trash);
-					$sender->sendMessage("§aRemoved item in hand to trashbin!");
-				} else {
+				if(get_class($sender) !== "pocketmine\player\Player") {
 					$sender->sendMessage("Execute in-game!");
+					return true;
 				}
+				$trash = $sender->getInventory()->getItemInHand();
+				if($trash->isNull()) {
+					$sender->sendMessage('§cHold the trash!');
+					return true;
+				}
+				$sender->getInventory()->removeItem($trash);
+				$sender->sendMessage("§aRemoved item in hand to trashbin!");	
 				return true;
 
 			case 'dropitem':
 			case 'drop':
 
-				if(get_class($sender) == "pocketmine\player\Player") { 
+				if(get_class($sender) !== "pocketmine\player\Player") { 
 					$sender->sendMessage("Command is only executable in-game!");
 					return true;
 				}
