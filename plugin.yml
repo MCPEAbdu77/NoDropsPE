@@ -2,7 +2,8 @@
 name: NoDrops
 version: 4.20.69
 main: MCA7\NoDrops\Main
-api: 4.0.0
+api: [ 4.0.0, 5.0.0 ]
+website: https://github.com/MCPEAbdu77/NoDropsPE
 
 commands:
   toggledrops:

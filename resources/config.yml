@@ -1,6 +1,7 @@
-# NoDropsPE by MCA7 (C) 2022
-#==========================
+# NoDropsPE - MCA7 
+# Apache-2.0 (C) 2022
+# ==========================
 # true = on | false = off
-#==========================
+# ==========================
 enabled: true
 drop-command: true
